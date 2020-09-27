@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="style.css">
+      <title>  Search in Non-Metric Space </title>
+   </head>
+
+   <script>
+      var req = new XMLHttpRequest();
+      req.open('GET', "keller.jpg", false);
+      req.send(null);
+      var headers = req.getAllResponseHeaders();
+      var headTokens = headers.split('$');
+      var headerData = headTokens[1].split('&');
+
+      var files = [];
+      for(var i=0; i<3; i++){
+         files[i] = headerData[i];
+      }
+   </script>
+
+   <body onload="document.getElementById('imageC').src = files[0];
+                  document.getElementById('imageA').src = files[1];
+                  document.getElementById('imageB').src = files[2];
+                  document.getElementById('imSubmit').value = headTokens[1];
+                  document.getElementById('codeText').innerHTML = 'Code: ' + headerData[3];">
+
+      
+      <div class="centeredBlock">
+         <h1>Search in Non-Metric Space</h1>
+         <h2 id="codeText"></h2>
+      </div>
+      <br>
+
+      <div class = "centeredBlock">
+         <img id="imageC" alt="Comparison Image">
+      </div>
+
+      <br>
+
+      <h1>
+         A
+         <div class="textSpacer"></div>
+         B
+      </h1>
+
+      <div class = "centeredBlock">
+         <img id="imageA" alt="Image A">
+         <div class="imageSpacer"></div>
+         <img id="imageB" alt="Image B">
+      </div>
+
+      <div class = "centeredBlock">
+         <form name="comparisonForm" action="page.html">
+            <h2>Is the top image more like image A or image B?</h2>
+            <input type="hidden" id="imSubmit" name="imSubmit">
+            <button value="A" type="submit" name="submit">Image A</button>
+            <div class="buttonSpacer"></div>
+            <button value="B" type="submit" name="submit">Image B</button>
+         </form>
+      </div>
+    </body>
+</html>
