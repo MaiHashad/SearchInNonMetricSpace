@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="style.css">
+      <title>  Search in Non-Metric Space </title>
+   </head>
+
+
+   <body onload="requestNewImages()">
+      <h1>Search in Non-Metric Space</h1>
+
+      <br><br>
+
+      <!-- top center image to be compared -->
+      <div class = "centeredBlock">
+         <img id="imageCompare" src="keller.jpg" alt="Comparison Image">
+      </div>
+
+      <br><br><br>
+
+      <h1>
+         A
+         <div class="textSpacer"></div>
+         B
+      </h1>
+
+      <!-- images being compared to -->
+      <div class = "centeredBlock">
+         <img id="imageA" alt="Image A">
+         <div class="imageSpacer"></div>
+         <img id="imageB" alt="Image B">
+      </div>
+
+      <br>
+
+      <!-- selector buttons -->
+      <div class = "centeredBlock">
+         <form name="comparisonForm">
+            <h2>Is the above picture more like image A or image B?</h2>
+            <button value = "A" onclick= "selectImage();">Image A</button>
+            <div class="buttonSpacer"></div>
+            <button value = "B" onclick= "selectImage();">Image B</button>
+         </form>
+      </div>
+
+      <script>
+            //create three image objects
+            var imageA = new Image();
+            var imageB = new Image();
+            var imageCompare = new Image();
+
+            //set default image source
+            imageA.src = "keller.jpg";
+            imageB.src = "keller.jpg";
+            imageCompare.src = "keller.jpg";
+
+            //set document element sources to image object sources
+            document.getElementById("imageA").src = imageA.src;
+            document.getElementById("imageB").src = imageB.src;
+            document.getElementById("imageCompare").src = imageCompare.src;
+
+
+            var verseChoose = document.querySelector('selectA');
+
+
+            //send either 'A' or 'B'
+            function selectImage(){
+               //send data
+
+               requestNewImages();
+            }
+
+            //request 3 new images
+            function requestNewImages(){
+               document.getElementById("imageCompare").src="new image src here";
+               document.getElementById("imageA").src="new image src here";
+               document.getElementById("imageB").src="new image src here";
+
+
+            }
+
+
+
+
+      </script>
+    </body>
+</html>

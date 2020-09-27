@@ -1,2 +1,1 @@
-# SearchInNonMetricSpace
-College Senior Project
+# SeniorDesign

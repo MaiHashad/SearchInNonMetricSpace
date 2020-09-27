@@ -1,0 +1,38 @@
+body {
+  background-color: #3973ac; 
+}
+
+img{
+  height:150px;
+}
+
+h1{
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+button{
+  font-size: 20px;
+}
+
+.buttonSpacer{
+  width: 180px;
+  display:inline-block;
+}
+
+.textSpacer{
+  width: 240px;
+  display:inline-block;
+}
+
+.imageSpacer{
+  width: 40px;
+  display: inline-block;
+}
+
+.centeredBlock{
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
